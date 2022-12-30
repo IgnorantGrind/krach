@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/krachpage/static/css/main.4d0e7cfc.css",
-    "main.js": "/krachpage/static/js/main.8dce9c42.js",
-    "static/media/IgnorantLogoWhite.jpg": "/krachpage/static/media/IgnorantLogoWhite.f7b2c8c8ee2adc161889.jpg",
-    "static/media/SozialAlkM.jpg": "/krachpage/static/media/SozialAlkM.e0c46b51e3b886d9407d.jpg",
-    "static/media/SozialAlkR.jpg": "/krachpage/static/media/SozialAlkR.4588148c06faa1933b63.jpg",
-    "static/media/GeorgiaPro-CondBold.ttf": "/krachpage/static/media/GeorgiaPro-CondBold.2d0a85b9812eb3f74c8c.ttf",
-    "static/media/IgnorantNoiseLogoWhite.jpg": "/krachpage/static/media/IgnorantNoiseLogoWhite.a42078f3a074354e8691.jpg",
-    "index.html": "/krachpage/index.html",
-    "main.4d0e7cfc.css.map": "/krachpage/static/css/main.4d0e7cfc.css.map",
-    "main.8dce9c42.js.map": "/krachpage/static/js/main.8dce9c42.js.map"
+    "main.css": "/static/css/main.5aec4669.css",
+    "main.js": "/static/js/main.5ef66327.js",
+    "static/media/IgnorantLogoWhite.jpg": "/static/media/IgnorantLogoWhite.f7b2c8c8ee2adc161889.jpg",
+    "static/media/SozialAlkM.jpg": "/static/media/SozialAlkM.e0c46b51e3b886d9407d.jpg",
+    "static/media/SozialAlkR.jpg": "/static/media/SozialAlkR.4588148c06faa1933b63.jpg",
+    "static/media/GeorgiaPro-CondBold.ttf": "/static/media/GeorgiaPro-CondBold.2d0a85b9812eb3f74c8c.ttf",
+    "static/media/IgnorantNoiseLogoWhite.jpg": "/static/media/IgnorantNoiseLogoWhite.a42078f3a074354e8691.jpg",
+    "index.html": "/index.html",
+    "main.5aec4669.css.map": "/static/css/main.5aec4669.css.map",
+    "main.5ef66327.js.map": "/static/js/main.5ef66327.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d0e7cfc.css",
-    "static/js/main.8dce9c42.js"
+    "static/css/main.5aec4669.css",
+    "static/js/main.5ef66327.js"
   ]
 }
