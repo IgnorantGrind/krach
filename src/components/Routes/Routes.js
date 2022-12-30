@@ -11,28 +11,28 @@ import NotFoundPage from "../Pages/NotFoundPage";
 
 const Routes = () => (
   <Switch>
-    <Route path="/">
+    <Route path="/krachpage">
       {() => <Band />}
     </Route>
-    <Route path="/news">
+    <Route path="/krachpage/news">
       {() => <News />}
     </Route>
-    <Route path="/shows">
+    <Route path="/krachpage/shows">
       {() => <Shows />}
     </Route>
-    <Route path="/music">
+    <Route path="/krachpage/music">
       {() => <Music />}
     </Route>
-    <Route path="/video">
+    <Route path="/krachpage/video">
       {() => <Video />}
     </Route>
-    <Route path="/contact">
+    <Route path="/krachpage/contact">
       {() => <Contact />}
     </Route>
-    <Route path="/about">
+    <Route path="/krachpage/about">
       {() => <About />}
     </Route>
-    <Route path="/:rest*">
+    <Route path="/krachpage/:rest*">
       {() => <NotFoundPage />}
     </Route>
   </Switch>

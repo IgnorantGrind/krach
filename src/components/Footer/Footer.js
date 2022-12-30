@@ -11,7 +11,7 @@ const Footer = () => (
     <footer>
       <FillerBig />
       <Link
-        href="/about"
+        href="/krachpage/about"
       >
         about
       </Link>

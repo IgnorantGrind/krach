@@ -11,32 +11,32 @@ const Menu = () => (
     <nav>
       <FillerSmall />
       <Link
-        href="/"
+        href="/krachpage"
       >
         band
       </Link>
       <Link
-        href="/news"
+        href="/krachpage/news"
       >
         news
       </Link>
       <Link
-        href="/music"
+        href="/krachpage/music"
       >
         shows
       </Link>
       <Link
-        href="/music"
+        href="/krachpage/music"
       >
         music
       </Link>
       <Link
-        href="/video"
+        href="/krachpage/video"
       >
         video
       </Link>
       <Link
-        href="/contact"
+        href="/krachpage/contact"
       >
         contact
       </Link>

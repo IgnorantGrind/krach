@@ -8,7 +8,7 @@ import "./Header.css";
 
 const Header = () => (
   <Link
-    href="/"
+    href="/krachpage"
   >
     {/* eslint-disable-next-line*/}
     <a
