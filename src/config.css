@@ -1,0 +1,5 @@
+@font-face  {
+  font-family: "Georgia Pro Condensed";
+  src: local(Georgia Pro Condensed Bold), url("../public/GeorgiaPro-CondBold.ttf");
+  font-weight: bold;
+}

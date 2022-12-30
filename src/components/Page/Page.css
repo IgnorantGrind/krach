@@ -1,0 +1,36 @@
+.page {
+  height: 100vh;
+  width: 84vw;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia;
+  font-size: calc(10px + 1.2vmin);
+  color: #D9D9D9;
+}
+
+a:link {
+  color: #FEAA85;
+}
+
+a:visited {
+  color: #EF7DF5;
+}
+
+a:hover {
+  color: #FFD4AD;
+}
+
+a:active {
+  color: #FE8586;
+}
+
+h1 {
+  margin-top: 0px;
+  color: #999999;
+  font-family: "Georgia Pro Condensed";
+  font-weight: bold;
+  font-size: calc(16px + 1.5vmin);
+}

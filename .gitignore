@@ -1,5 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# dev batch files
+*.bat
+
+# test app
+/src/components/TestApp
+
 # dependencies
 /node_modules
 /.pnp
