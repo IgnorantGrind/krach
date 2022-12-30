@@ -6,6 +6,9 @@
 # test app
 /src/components/TestApp
 
+# visual studio
+/.vs
+
 # dependencies
 /node_modules
 /.pnp
