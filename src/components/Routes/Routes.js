@@ -11,6 +11,9 @@ import NotFoundPage from "../Pages/NotFoundPage";
 
 const Routes = () => (
   <Switch>
+    <Route path="/">
+      {() => <Band />}
+    </Route>
     <Route path="/krachpage">
       {() => <Band />}
     </Route>
