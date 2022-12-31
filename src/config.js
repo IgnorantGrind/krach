@@ -88,8 +88,6 @@ const routes = [
 const router = createHashRouter(routes);     //  when using a hash router
 // const router = createBrowserRouter(routes); //  when using a browser router
 
-const useHashPrefix = false;                 //  set to false if using a browser router or to avoid development bugs
-
 
 //////////////////////
 //                  //
@@ -110,4 +108,4 @@ const runConfig = () => {
 };
 
 
-export { runConfig, router, useHashPrefix };
+export { runConfig, router };
