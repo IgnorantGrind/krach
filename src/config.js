@@ -9,7 +9,7 @@ import Layout from "./components/Layout/Layout";
 //                    //
 ////////////////////////
 
-//-->  Import page types below  <--//
+//-->  Import page types  <--//
 
 import Band from "./components/PageTypes/Band";
 import News from "./components/PageTypes/News";
@@ -27,14 +27,13 @@ import ErrorPage from "./components/PageTypes/ErrorPage";
 //                 //
 /////////////////////
 
-//-->  Choose router type import below  <--//
+//-->  Choose router type import  <--//
 
 import { createHashRouter } from "react-router-dom";     //  when using a hash router
 // import { createBrowserRouter } from "react-router-dom"; //  when using a browser router
 
-const useHashLinks = true;
 
-//-->  Configure page paths below  <--//  for help see https://reactrouter.com
+//-->  Configure page paths  <--//  for help see https://reactrouter.com
 
 const routes = [
   {
@@ -83,10 +82,13 @@ const routes = [
   }
 ];
 
-//-->  Choose router type below  <--//
+
+//-->  Configure router type below  <--//
 
 const router = createHashRouter(routes);     //  when using a hash router
 // const router = createBrowserRouter(routes); //  when using a browser router
+
+const useHashPrefix = false;                 //  set to false if using a browser router or to avoid development bugs
 
 
 //////////////////////
@@ -95,7 +97,7 @@ const router = createHashRouter(routes);     //  when using a hash router
 //                  //
 //////////////////////
 
-//-->  Load Webfonts below                <--//
+//-->  Load Webfonts                      <--//
 //-->  Add local font urls to config.css  <--//  for help see https://www.npmjs.com/package/webfontloader
 
 const runConfig = () => {
@@ -107,4 +109,5 @@ const runConfig = () => {
   };
 };
 
-export { runConfig, router, useHashLinks };
+
+export { runConfig, router, useHashPrefix };

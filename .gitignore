@@ -5,7 +5,6 @@
 
 # test app and components
 /src/components/TestApp
-/src/components/Routes
 
 # visual studio
 /.vs
