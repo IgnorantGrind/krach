@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import { Link } from "wouter"; //  when using wouter
+import { useHashLinks } from "../../config";
 import Filler from "../Fillers/Filler/Filler";
 import FillerSmall from "../Fillers/FillerSmall/FillerSmall";
 import "./Menu.css";
+
+const prefix = useHashLinks ? "#" : "";
 
 const links = [
   <Link
@@ -12,27 +15,27 @@ const links = [
     band
   </Link>,
   <Link
-    to="news"
+    to={prefix + "news"}
   >
     news
   </Link>,
   <Link
-    to="shows"
+    to={prefix + "shows"}
   >
     shows
   </Link>,
   <Link
-    to="music"
+    to={prefix + "music"}
   >
     music
   </Link>,
   <Link
-    to="video"
+    to={prefix + "video"}
   >
     video
   </Link>,
   <Link
-    to="contact"
+    to={prefix + "contact"}
   >
     contact
   </Link>

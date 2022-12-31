@@ -2,10 +2,12 @@ import React from "react";
 import WebFont from 'webfontloader';
 import Layout from "./components/Layout/Layout";
 
-//-->  Choose router type import below  <--//
 
-import { createHashRouter } from "react-router-dom";     //  when using a hash router
-// import { createBrowserRouter } from "react-router-dom"; //  when using a browser router
+////////////////////////
+//                    //
+//-->  Page Types  <--//
+//                    //
+////////////////////////
 
 //-->  Import page types below  <--//
 
@@ -17,6 +19,20 @@ import Video from "./components/PageTypes/Video";
 import Contact from "./components/PageTypes/Contact";
 import About from "./components/PageTypes/About";
 import ErrorPage from "./components/PageTypes/ErrorPage";
+
+
+/////////////////////
+//                 //
+//-->  ROUTING  <--//
+//                 //
+/////////////////////
+
+//-->  Choose router type import below  <--//
+
+import { createHashRouter } from "react-router-dom";     //  when using a hash router
+// import { createBrowserRouter } from "react-router-dom"; //  when using a browser router
+
+const useHashLinks = true;
 
 //-->  Configure page paths below  <--//  for help see https://reactrouter.com
 
@@ -72,6 +88,13 @@ const routes = [
 const router = createHashRouter(routes);     //  when using a hash router
 // const router = createBrowserRouter(routes); //  when using a browser router
 
+
+//////////////////////
+//                  //
+//-->  WEBFONTS  <--//
+//                  //
+//////////////////////
+
 //-->  Load Webfonts below                <--//
 //-->  Add local font urls to config.css  <--//  for help see https://www.npmjs.com/package/webfontloader
 
@@ -84,4 +107,4 @@ const runConfig = () => {
   };
 };
 
-export { runConfig, router };
+export { runConfig, router, useHashLinks };
