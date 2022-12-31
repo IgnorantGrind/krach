@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
+// import { Link } from "wouter"; //  when using wouter
 import FillerBig from "../Fillers/FillerBig/FillerBig";
 import FillerSmall from "../Fillers/FillerSmall/FillerSmall";
 import "./Footer.css";
@@ -11,7 +12,7 @@ const Footer = () => (
     <footer>
       <FillerBig />
       <Link
-        href="/krachpage/about"
+        to="about"
       >
         about
       </Link>
