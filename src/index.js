@@ -4,15 +4,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // import { RouterProvider } from "react-router-dom";
 import TestApp from "./components/TestApp/TestApp";   //  when running TestApp
-import { runConfig, router } from "./config";
-
-runConfig();
+// import { runConfig, router } from "./config";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 /*
+function App() {
+  runConfig();
+  return (
+    <RouterProvider router={router} />
+  );
+}
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 */
