@@ -10,8 +10,8 @@ const About = () => {
           Loading...
         </div>
       ) : (
-          <div>
-            {page.data.title}
+        <div>
+          {state}
         </div>
       )}
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
-import { PrismicProvider } from '@prismicio/react'
-import { client } from './prismic'
+import { PrismicProvider } from "@prismicio/react";
+import { client } from "./prismic";
+import { HelmetProvider } from "react-helmet-async";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root";
 import About from "./About";
@@ -39,10 +40,15 @@ const router = createHashRouter([
   }
 ]);
 
-const TestApp = () => (
-  <PrismicProvider client={client}>
-    <RouterProvider router={router} />
-  </PrismicProvider>
-);
+const TestApp = () => {
+
+  return (
+    <HelmetProvider>
+      <PrismicProvider client={client}>
+        <RouterProvider router={router} />
+      </PrismicProvider>
+    </HelmetProvider>
+  );
+}
 
 export default TestApp;

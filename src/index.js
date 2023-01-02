@@ -9,7 +9,6 @@ import { runConfig, router } from "./config";
 runConfig();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 /*
 root.render(
   <React.StrictMode>
@@ -23,4 +22,3 @@ root.render(          // when running TestApp
     <TestApp />
   </React.StrictMode>
 );
-

@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouteError, Link, Navigate, Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Root = () => {
   const error = useRouteError();
@@ -7,6 +8,9 @@ const Root = () => {
 
   return (
     <>
+      <Helmet>
+        <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=ignorantgrind"></script>
+      </Helmet>
       <div>
         <h1>React Router Test</h1>
         <nav>
