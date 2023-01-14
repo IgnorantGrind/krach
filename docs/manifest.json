@@ -1,19 +1,19 @@
 {
-  "short_name": "KrachPage",
-  "name": "Bandpage Web App",
+  "short_name": "Ignorant",
+  "name": "Political grindcore band from Leipzig, Germany. Opposing the ware-producing patriarchy called capitalism!",
   "icons": [
     {
-      "src": "krachpage/KrachPage.ico",
+      "src": "img/IgnorantNoise.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "krachpage/KrachPage192.png",
+      "src": "img/IgnorantNoise.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "krachpage/KrachPage512.png",
+      "src": "img/IgnorantNoise512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
