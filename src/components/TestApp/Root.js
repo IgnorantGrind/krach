@@ -12,7 +12,7 @@ const Root = () => {
         <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=ignorantgrind"></script>
       </Helmet>
       <div>
-        <h1>React Router Test</h1>
+        <h1>Prismic IO Test</h1>
         <nav>
           <ul>
             <li>

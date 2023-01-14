@@ -1,0 +1,62 @@
+{
+  "title": "Ignorant",
+  "description": "Political grindcore band from Leipzig, Germany. Opposing the ware-producing patriarchy called capitalism!",
+  "keywords": "Ignorant, music, band, grindcore, grind, crustcore, crust, powerviolence, death metal, thrash metal, Leipzig, Germany",
+  "icon": "IgnorantNoise.ico",
+  "appleTouchIcon": "IgnorantNoise.png",
+  "noScript": "Please enable JavaScript to view the Ignorant website.",
+  "locale": "en-GB",
+  "pageNotFound": "Sorry, the content you requested does not exist.",
+  "mainLogo": "IgnorantLogo.jpg",
+  "mainLogoAlt": "Ignorant Band Logo",
+  "additionalLogo": "IgnorantNoiseLogo.jpg",
+  "additionalLogoAlt": "Crossed Out Note Logo",
+  "edgeImgLeft": "SozialAlkM.jpg",
+  "edgeImgRight": "SozialAlkR.jpg",
+  "edgeImgAlt": "picture of a liquor shelf",
+  "googleFont": "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto+Slab:wght@200;300;400&display=swap",
+  "useHashRouter": false,
+  "rootElement": {
+    "id": "home",
+    "subtitle": "Grindcore",
+    "link": "band"
+  },
+  "routes": [
+    {
+      "id": "news",
+      "path": "/news",
+      "subtitle": "News",
+      "link": "news"
+    },
+    {
+      "id": "shows",
+      "path": "/shows",
+      "subtitle": "Shows",
+      "link": "shows"
+    },
+    {
+      "id": "music",
+      "path": "/music",
+      "subtitle": "Music",
+      "link": "music"
+    },
+    {
+      "id": "video",
+      "path": "/video",
+      "subtitle": "Video",
+      "link": "video"
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "subtitle": "Contact",
+      "link": "contact"
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "subtitle": "About",
+      "link": "about"
+    }
+  ]
+}

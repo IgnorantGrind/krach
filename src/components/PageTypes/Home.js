@@ -8,7 +8,7 @@ import { tagMap } from "../Layout/Layout";
 
 let html;
 
-fetch("content/video.html")
+fetch("content/home.html")
   .then((response) => response.text())
   .then((data) => {
     html = data;
@@ -19,7 +19,7 @@ fetch("content/video.html")
 
 // create page from html string 
 
-const Video = ({ title, subtitle }) => {
+const Home = ({ title, subtitle }) => {
 
   return (
     <>
@@ -39,9 +39,9 @@ const Video = ({ title, subtitle }) => {
   );
 };
 
-Video.propTypes = {
+Home.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired
 };
 
-export default Video;
+export default Home;

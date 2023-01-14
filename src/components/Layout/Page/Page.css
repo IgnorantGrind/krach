@@ -1,0 +1,117 @@
+.page {
+  height: 100vh;
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Slab";
+  font-weight: 200;
+  font-size: calc(9px + 1vmin);
+  color: #F9F9F9;
+  margin: 0px 1px 0px 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #FFD4AD;
+}
+
+a:visited {
+  color: #FFD4AD;
+}
+
+a:hover {
+  color: #FFE2C7;
+}
+
+a:active {
+  color: #FFD4AD;
+}
+
+h1 {
+  margin-top: 0.05%;
+  margin-bottom: calc(0.7vh + 0.4%);
+  color: #E4E4E4;
+  font-weight: 400;
+  font-size: calc(12px + 1.5vmin);
+}
+
+h2 {
+  padding-top: calc(0.2vh + 0.2%);
+  margin-bottom: 0px;
+  margin-left: 0.2em;
+  color: #E4E4E4;
+  font-weight: 400;
+  font-style: italic;
+  font-size: calc(10px + 1.3vmin);
+}
+
+h3 {
+  margin-top: 0.05%;
+  margin-bottom: calc(0.7vh + 0.4%);
+  margin-left: 0.2em;
+  color: #E4E4E4;
+  font-weight: 300;
+  font-style: italic;
+  font-size: calc(9px + 1.2vmin);
+}
+
+h4 {
+  margin-top: 0.05%;
+  margin-bottom: calc(0.7vh + 0.4%);
+  margin-left: 0.5em;
+  color: #E4E4E4;
+  font-weight: 400;
+  font-size: calc(9px + 1.2vmin);
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: calc(0.7vh + 0.3%);
+  margin-left: 2px;
+  line-height: 1.45;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: calc(0.7vh + 0.3%);
+  padding-left: 1em;
+}
+
+li {
+  list-style-type: none;
+}
+
+li li {
+  padding-left: 2.5em;
+}
+
+.email {
+  margin-top: calc(0.7vh + 0.3%);
+  font-style: italic;
+}
+
+.tourName {
+  margin-top: calc(0.7vh + 0.3%);
+}
+
+.bandNames {
+  margin-bottom: calc(0.2vh + 0.1%);
+}
+
+.newsPost {
+  padding-bottom: calc(0.7vh + 0.6%);
+}
+
+.postDate {
+  position: relative;
+  top: calc(-1.3em - 0.2vh);
+  text-align: right;
+  font-family: 'Roboto Flex';
+  font-weight: 200;
+  font-size: calc(6px + 1vmin + 0.2%);
+}

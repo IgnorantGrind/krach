@@ -1,0 +1,36 @@
+.menu {
+  width: 100%;
+}
+
+nav {
+  background-color: #6B6B6B;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: calc(10px + 1.1vmin);
+  padding: calc(2px + 1vmin);
+}
+
+nav a {
+  padding-left: calc(6px + 1vmin);
+  padding-right: calc(1vmin);
+  text-decoration-line: none;
+}
+
+nav a:link {
+  color: #E9E9E9;
+}
+
+nav a:visited {
+  color: #E9E9E9;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a:active {
+  color: #E9E9E9;
+}

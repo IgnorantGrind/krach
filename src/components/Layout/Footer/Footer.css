@@ -1,0 +1,35 @@
+.footer-wrapper {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: calc(2px + 1vmin);
+}
+
+footer a {
+  padding-left: calc(1vmin);
+  padding-right: calc(2vmin);
+  text-decoration-line: none;
+}
+
+footer a:link {
+  color: #DBDBDB;
+}
+
+footer a:visited {
+  color: #DBDBDB;
+}
+
+footer a:hover {
+  color: white;
+}
+
+nav a:active {
+  color: #DBDBDB;
+}

@@ -1,26 +1,47 @@
 import React from "react";
-//import { PrismicRichText, usePrismicDocumentByUID, useSinglePrismicDocument } from '@prismicio/react'
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet-async";
+import HtmlMapper from 'react-html-map';
+import { tagMap } from "../Layout/Layout";
 
-function About() {
-  //const [page, { state }] = useSinglePrismicDocument("about-page");
-  /*const [page, { state }] = usePrismicDocumentByUID("about-page", "about");
+// fetch page html
+
+let html;
+
+fetch("content/about.html")
+  .then((response) => response.text())
+  .then((data) => {
+    html = data;
+  })
+  .catch((err) => {
+    console.log("Failed to fetch page: ", err);
+  });
+
+// create page from html string 
+
+const About = ({ title, subtitle }) => {
 
   return (
-    <div>
-      {state === 'loading' ? (
-        <div>
-          Loading...
-        </div>
-      ) : (
-        <PrismicRichText field={page.data.about} />
-      )}
-    </div>
-  );*/
-  return (
-    <div>
-      About page
-    </div>
+    <>
+
+      {/* create helmet */}
+
+      <Helmet>
+        <title>{title} - {subtitle}</title>
+      </Helmet>
+
+      {/* convert html string to html elements and react components */}
+
+      <HtmlMapper html={html}>
+        {tagMap}
+      </HtmlMapper>
+    </>
   );
+};
+
+About.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired
 };
 
 export default About;

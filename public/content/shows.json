@@ -1,0 +1,75 @@
+{
+  "heading": "Ignorant concerts",
+  "coming": "Upcoming shows:",
+  "past": "Past shows:",
+  "dateFormat": "d. MMMM",
+  "shows": [
+    {
+      "date": "20230316",
+      "end": "20230319",
+      "tour": "Junge Alter Amok Tour",
+      "bands": [
+        "DEAD SLOW",
+        "CODENAME HYDRA"
+      ],
+      "shows": [
+        {
+          "date": "20230316",
+          "city": "Halle",
+          "venue": "Reil18 (tbc)"
+        },
+        {
+          "date": "20230317",
+          "city": "Weimar",
+          "venue": "Gerber (tbc)"
+        },
+        {
+          "date": "20230318",
+          "city": "Chemnitz",
+          "venue": "B-Hof (tbc)"
+        },
+        {
+          "date": "20230319",
+          "city": "Leipzig",
+          "venue": "Plaque"
+        }
+      ]
+    },
+    {
+      "date": "20230227",
+      "city": "Leipzig",
+      "venue": "",
+      "bands": [
+        "WORMROT (singapore)",
+        "NICKELCRACK"
+      ]
+    },
+    {
+      "date": "20220806",
+      "city": "Leipzig",
+      "venue": "Soltmann",
+      "bands": [
+        "ART EST",
+        "HUMAN PREY"
+      ]
+    },
+    {
+      "date": "20220618",
+      "city": "Leipzig",
+      "venue": "Conserve",
+      "bands": [
+        "NO HONEY IN PARADISE",
+        "DRECK WEG"
+      ]
+    },
+    {
+      "date": "20220708",
+      "city": "Leipzig",
+      "venue": "hinZundkunZ",
+      "bands": [
+        "SOCIAL CHAOS (bra)",
+        "DEZAZTRE NATURAL (chi)"
+      ]
+    }
+  ]
+}
