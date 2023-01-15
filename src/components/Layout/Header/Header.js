@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Filler from "../Fillers/Filler/Filler";
-import FillerSmall from "../Fillers/FillerSmall/FillerSmall";
+import Filler from "../Filler/Filler";
 import "./Header.css";
 
 // header component with two logos
@@ -18,7 +17,9 @@ const Header = ({ mainLogo, mainLogoAlt = "", additionalLogo, additionalLogoAlt 
     {/* header with two logos */}
 
     <header>
-      <FillerSmall />
+      <Filler
+        size = "small"
+      />
       <img
         src={additionalLogo}
         alt={additionalLogoAlt}
@@ -36,7 +37,9 @@ const Header = ({ mainLogo, mainLogoAlt = "", additionalLogo, additionalLogoAlt 
         alt={additionalLogoAlt}
         className="additional-logo"
       />
-      <FillerSmall />
+      <Filler
+        size="small"
+       />
     </header>
   </Link>
 );

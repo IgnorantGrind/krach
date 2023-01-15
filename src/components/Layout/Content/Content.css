@@ -9,7 +9,7 @@
 
 .content-wrapper {
   flex: 1;
-  margin: calc(1.6vh - 3px + 0.5%) calc(30% - 101px) calc(3.8vh - 10px + 1.7%) calc(23% - 61px);
+  margin: calc(1.6vh - 3px + 0.5%) calc(35% - 123px) calc(2.8vh - 10px + 1.7%) calc(27% - 80px);
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #454545 #303030;

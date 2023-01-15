@@ -1,0 +1,17 @@
+.email {
+  margin-top: calc(0.7vh + 0.3%);
+  font-style: italic;
+}
+
+.newsPost {
+  padding-bottom: calc(0.7vh + 0.6%);
+}
+
+.postDate {
+  position: relative;
+  top: calc(-1.3em - 0.2vh);
+  text-align: right;
+  font-family: 'Roboto Flex';
+  font-weight: 200;
+  font-size: calc(6px + 1vmin + 0.2%);
+}

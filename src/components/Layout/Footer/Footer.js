@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FillerBig from "../Fillers/FillerBig/FillerBig";
-import FillerSmall from "../Fillers/FillerSmall/FillerSmall";
+import Filler from "../Filler/Filler";
 import "./Footer.css";
 
 // footer component with 'about' link
@@ -17,13 +16,17 @@ const Footer = () => (
     {/* footer with 'about' link */}
 
     <footer>
-      <FillerBig />
+      <Filler
+        size="big"
+      />
       <Link
         to="about"
       >
         about
       </Link>
-      <FillerSmall />
+      <Filler
+        size="small"
+      />
     </footer>
   </div >
 );

@@ -3,7 +3,7 @@
 # KrachPage files
 /index.html
 /manifest.json
-/public/krachpage
+/krachpage
 
 # test app and components
 /src/components/TestApp

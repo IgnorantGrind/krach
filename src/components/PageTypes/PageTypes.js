@@ -7,6 +7,7 @@ import Home from "./Home";
 import Music from "./Music";
 import Shows from "./Shows";
 import Video from "./Video";
+import "./PageTypes.css";
 
 // map page types
 
@@ -19,6 +20,8 @@ const Types = {
   shows: Shows,
   video: Video
 };
+
+// create page component from id
 
 const PageTypes = ({ id, title, subtitle, locale }) => {
   const component = Types[id];

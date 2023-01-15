@@ -1,0 +1,11 @@
+.filler {
+  flex: 1;
+}
+
+.filler-small {
+  flex: 0.33;
+}
+
+.filler-big {
+  flex: 10;
+}

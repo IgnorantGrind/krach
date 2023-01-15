@@ -4,21 +4,26 @@ import Bands from "./Bands";
 
 // single concert date component
 
-const Show = ({ show, dateFormat }) => {
+const Show = ({ show, dateFormat, className }) => {
   const date = dateFormat ?
     show.date.toFormat(dateFormat) :
     show.date.toFormat("DDD");
   return (
-    <li>
+    <li
+      className={className}
+    >
       {date} - {show.city} - {show.venue}
-      <Bands show={show} />
+      <Bands
+        show={show}
+      />
     </li>
   );
 };
 
 Show.propTypes = {
   show: PropTypes.object.isRequired,
-  dateFormat: PropTypes.string
+  dateFormat: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default Show;

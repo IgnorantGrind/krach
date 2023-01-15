@@ -10,6 +10,7 @@ import Header from "./Header/Header";
 import Menu from "./Menu/Menu";
 import Content from "./Content/Content";
 import Footer from "./Footer/Footer";
+import CookieConsent from "../loaders/CookieConsent/CookieConsent"
 import "./Layout.css";
 
 // create helmet and load page layout
@@ -148,15 +149,44 @@ const tagMap = {
 
   // convert <iframe> to react-iframe <Iframe>
 
-  iframe: ({ src, width, height, border, frameborder, ...rest }) => (
-    <Iframe
-      url={src}
-      frameBorder={frameborder || border}
-      width={width}
-      height={height}
-      {...rest}
-    />
-  ),
+  iframe: ({ src, width, height, border, frameborder, ...rest }) => {
+
+    return src.includes("youtube-nocookie") ?
+      <div
+        class="video-container"
+      >
+        <Iframe
+          url={src}
+          frameBorder={frameborder || border}
+          width={width}
+          height={height}
+          {...rest}
+        />
+      </div> :
+      src.includes("youtube") ?
+        <CookieConsent>
+          <div
+            class="video-container"
+          >
+            <Iframe
+              url={src}
+              frameBorder={frameborder || border}
+              width={width}
+              height={height}
+              {...rest}
+            />
+          </div>
+        </CookieConsent> :
+        <CookieConsent>
+          <Iframe
+            url={src}
+            frameBorder={frameborder || border}
+            width={width}
+            height={height}
+            {...rest}
+          />
+        </CookieConsent>;
+  },
 
   // convert <a> to react-router <Link> for relative links
 

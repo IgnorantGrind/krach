@@ -19,7 +19,7 @@ fetch("content/home.html")
 
 // create page from html string 
 
-const Home = ({ title, subtitle }) => {
+const Home = ({ data, title, subtitle }) => {
 
   return (
     <>

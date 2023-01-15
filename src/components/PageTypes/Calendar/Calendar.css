@@ -1,0 +1,12 @@
+.tourName {
+  margin-top: calc(0.7vh + 0.3%);
+}
+
+.tourDates {
+  margin-left: 0.7em;
+}
+
+.bandNames {
+  margin-bottom: calc(0.2vh + 0.1%);
+  padding-left: 2.5em;
+}

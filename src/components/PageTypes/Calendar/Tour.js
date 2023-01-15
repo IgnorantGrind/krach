@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Show from "./Show";
+import Bands from "./Bands";
 
 // tour component
 
@@ -9,16 +10,28 @@ const Tour = ({ tour, dateFormat }) => {
     tour.shows.map((show) => {
 
       return (
-        <ul>
-          <Show
-            show={show}
-          />
-        </ul>
+        <Show 
+          show={show}
+          dateFormat={dateFormat}
+          className="tourDates"
+        />
       );
     }) :
     <></>;
 
-  return result;
+  return (
+    <>
+      <li
+        className="tourName"
+      >
+        <b>{tour.tour}</b>
+        <Bands
+          show={tour}
+        />
+      </li>
+      {result}
+    </>
+  )
 };
 
 Tour.propTypes = {

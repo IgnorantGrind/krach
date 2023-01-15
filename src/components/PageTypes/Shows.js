@@ -61,23 +61,27 @@ const Shows = ({ title, subtitle, locale }) => {
 
   // divide shows into years
 
-  const futureYears = {};
-  const pastYears = {};
+  const futureYears = [];
+  const pastYears = [];
 
-  const makeYears = (shows, years) => {
-    let show, year;
+  const makeYears = (shows, targetArray) => {
+    let show, year, result, years = [];
     for (show of shows) {
       year = show.date.year;
-      if (!(year in years)) {
-        years[year] = [];
+      if (years[years.length-1] !== year) {
+        years.push(year)
+        result = [];
       };
-      years[year].push(show);
+      result.push(show);
     };
+    targetArray.push(result);
   };
   makeYears(futureShows, futureYears);
   makeYears(pastShows, pastYears);
+  futureYears.reverse();
 
   // create main component
+  console.log(dateFormat);
 
   return (
     <>
@@ -92,9 +96,16 @@ const Shows = ({ title, subtitle, locale }) => {
 
       <h1>{heading}</h1>
       <h3>{coming}</h3>
-      <Calendar years={futureYears} dateFormat={dateFormat} /><br />
+      <Calendar
+        years={futureYears}
+        dateFormat={dateFormat}
+      />
+      <br />
       <h3>{past}</h3>
-      <Calendar years={pastYears} dateFormat={dateFormat} />
+      <Calendar
+        years={pastYears}
+        dateFormat={dateFormat}
+      />
     </>
   );
 };
