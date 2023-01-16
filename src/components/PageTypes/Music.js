@@ -1,25 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 import HtmlMapper from 'react-html-map';
-import { tagMap } from "../Layout/Layout";
+import { tagMap } from '../Layout/Layout';
 
 // fetch page html
 
 let html;
 
-fetch("content/music.html")
+fetch('content/music.html')
   .then((response) => response.text())
   .then((data) => {
     html = data;
   })
   .catch((err) => {
-    console.log("Failed to fetch page: ", err);
+    console.log('Failed to fetch page: ', err);
   });
 
 // create page from html string 
 
-const Music = ({ title, subtitle }) => {
+const Music = ({ title, subtitle, cookieConsentText }) => {
 
   return (
     <>
@@ -33,7 +33,7 @@ const Music = ({ title, subtitle }) => {
       {/* convert html string to html elements and react components */}
 
       <HtmlMapper html={html}>
-        {tagMap}
+        {tagMap(cookieConsentText)}
       </HtmlMapper>
     </>
   );
@@ -41,7 +41,8 @@ const Music = ({ title, subtitle }) => {
 
 Music.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired
+  subtitle: PropTypes.string.isRequired,
+  cookieConsentText: PropTypes.string
 };
 
 export default Music;

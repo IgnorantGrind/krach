@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import "./EdgeImg.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import './EdgeImg.css';
 
 // image with automatic size control
 
-const EdgeImg = ({ src, isLeft = true, alt = "" }) => (
+const EdgeImg = ({ src, isLeft = true, alt = '' }) => (
 
   // container for layout
 
   <div
     className={classNames({
-      "edge-container-left": isLeft,
-      "edge-container-right": !isLeft
+      'edge-container-left': isLeft,
+      'edge-container-right': !isLeft
     })}
   >
 
@@ -20,7 +20,7 @@ const EdgeImg = ({ src, isLeft = true, alt = "" }) => (
     <img
       src={src}
       alt={alt}
-      className="edge-img"
+      className='edge-img'
     />
   </div>
 );

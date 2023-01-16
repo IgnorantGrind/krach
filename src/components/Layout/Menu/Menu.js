@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Filler from "../Filler/Filler";
-import "./Menu.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Filler from '../Filler/Filler';
+import './Menu.css';
 
 // main menu component
 
@@ -10,32 +10,32 @@ import "./Menu.css";
 const Links = () => (
   <>
     <Link
-      to="/"
+      to='/'
     >
       band
     </Link>
     <Link
-      to="/news"
+      to='/news'
     >
       news
     </Link>
     <Link
-      to="/shows"
+      to='/shows'
     >
       shows
     </Link>
     <Link
-      to="/music"
+      to='/music'
     >
       music
     </Link>
     <Link
-      to="/video"
+      to='/video'
     >
       video
     </Link>
     <Link
-      to="/contact"
+      to='/contact'
     >
       contact
     </Link>
@@ -49,14 +49,14 @@ const Menu = () => (
   // container element for layout
 
   <div
-    className="menu"
+    className='menu'
   >
 
     {/* navigation bar */}
 
     <nav>
       <Filler
-        size="small"
+        size='small'
       />
       <Links />
       <Filler />

@@ -1,13 +1,13 @@
-import { createElement } from "react";
-import PropTypes from "prop-types";
-import About from "./About";
-import News from "./News";
-import Contact from "./Contact";
-import Home from "./Home";
-import Music from "./Music";
-import Shows from "./Shows";
-import Video from "./Video";
-import "./PageTypes.css";
+import { createElement } from 'react';
+import PropTypes from 'prop-types';
+import About from './About';
+import News from './News';
+import Contact from './Contact';
+import Home from './Home';
+import Music from './Music';
+import Shows from './Shows';
+import Video from './Video';
+import './PageTypes.css';
 
 // map page types
 
@@ -23,7 +23,7 @@ const Types = {
 
 // create page component from id
 
-const PageTypes = ({ id, title, subtitle, locale }) => {
+const PageTypes = ({ id, title, subtitle, locale, cookieConsentText }) => {
   const component = Types[id];
 
   return createElement(
@@ -31,7 +31,8 @@ const PageTypes = ({ id, title, subtitle, locale }) => {
     {
       title: title,
       subtitle: subtitle,
-      locale: locale
+      locale: locale,
+      cookieConsentText
     }
   );
 }

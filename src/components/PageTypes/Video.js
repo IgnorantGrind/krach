@@ -1,25 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 import HtmlMapper from 'react-html-map';
-import { tagMap } from "../Layout/Layout";
+import { tagMap } from '../Layout/Layout';
 
 // fetch page html
 
 let html;
 
-fetch("content/video.html")
+fetch('content/video.html')
   .then((response) => response.text())
   .then((data) => {
     html = data;
   })
   .catch((err) => {
-    console.log("Failed to fetch page: ", err);
+    console.log('Failed to fetch page: ', err);
   });
 
 // create page from html string 
 
-const Video = ({ title, subtitle }) => {
+const Video = ({ title, subtitle, cookieConsentText }) => {
+  console.log(cookieConsentText);
 
   return (
     <>
@@ -33,7 +34,7 @@ const Video = ({ title, subtitle }) => {
       {/* convert html string to html elements and react components */}
 
       <HtmlMapper html={html}>
-        {tagMap}
+        {tagMap(cookieConsentText)}
       </HtmlMapper>
     </>
   );
@@ -41,7 +42,8 @@ const Video = ({ title, subtitle }) => {
 
 Video.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired
+  subtitle: PropTypes.string.isRequired,
+  cookieConsentText: PropTypes.string
 };
 
 export default Video;

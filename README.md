@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @IgnorantGrind
 - 👀 I’m the profile of the grindcore band IGNORANT
-- 🌱 I'm an app for the band homepage
+- 🌱 I"m an app for the band homepage
 - 💞️ I’m developed by Hannes
 - 📫 ignorantgrind@gmx.net
 

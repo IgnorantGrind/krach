@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Filler from "../Filler/Filler";
-import "./Footer.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Filler from '../Filler/Filler';
+import './Footer.css';
 
 // footer component with 'about' link
 
@@ -10,22 +10,22 @@ const Footer = () => (
   // wrapper element for layout
 
   <div
-    className="footer-wrapper"
+    className='footer-wrapper'
   >
 
     {/* footer with 'about' link */}
 
     <footer>
       <Filler
-        size="big"
+        size='big'
       />
       <Link
-        to="about"
+        to='about'
       >
         about
       </Link>
       <Filler
-        size="small"
+        size='small'
       />
     </footer>
   </div >

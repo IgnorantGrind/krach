@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Filler from "../Fillers/Filler/Filler";
-import Iframe from "react-iframe";
-import "./IframeLoader.css";
+import React, { Component } from 'react';
+import Filler from '../Fillers/Filler/Filler';
+import Iframe from 'react-iframe';
+import './IframeLoader.css';
 
 class IframeLoader extends Component {
   constructor({ spinner, src, width, height, border, frameborder, ...rest }) {
@@ -31,11 +31,11 @@ class IframeLoader extends Component {
           width: this.width,
           height: this.height
         }}
-        className="embed"
+        className='embed'
       >
         {
           this.state.loading ?
-            <div className="loading">
+            <div className='loading'>
               <Filler />
               {this.spinner}
               <Filler />

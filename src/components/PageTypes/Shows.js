@@ -1,20 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
-import { DateTime } from "luxon";
-import Calendar from "./Calendar/Calendar"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
+import { DateTime } from 'luxon';
+import Calendar from './Calendar/Calendar'
 
 // fetch page json data
 
 let jsonString;
 
-fetch("content/shows.json")
+fetch('content/shows.json')
   .then((response) => response.text())
   .then((data) => {
     jsonString = data;
   })
   .catch((err) => {
-    console.log("Failed to fetch page: ", err);
+    console.log('Failed to fetch page: ', err);
   });
 
 // create page from json data
@@ -33,7 +33,7 @@ const Shows = ({ title, subtitle, locale }) => {
   // filter past / future shows, resort
   // for date format info see https://moment.github.io/luxon/#/parsing?id=table-of-tokens
 
-  const currentDate = DateTime.now().setLocale('en-GB').toFormat("yyyyMMdd");
+  const currentDate = DateTime.now().setLocale('en-GB').toFormat('yyyyMMdd');
 
   const pastShows = shows.filter((a) => a.date < currentDate);
   const futureShows = shows.filter((a) => a.date >= currentDate).reverse();
@@ -43,10 +43,10 @@ const Shows = ({ title, subtitle, locale }) => {
   const transform = (shows) => {
     let show, date;
     for (show of shows) {
-      date = DateTime.fromFormat(show.date, "yyyyMMdd");
+      date = DateTime.fromFormat(show.date, 'yyyyMMdd');
       show.date = date.setLocale(locale);
-      if ("tour" in show) {
-        date = DateTime.fromFormat(show.end, "yyyyMMdd");
+      if ('tour' in show) {
+        date = DateTime.fromFormat(show.end, 'yyyyMMdd');
         show.end = date.setLocale(locale);
 
       // sort and transform tour dates

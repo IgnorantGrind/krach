@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Year from "./Year";
-import "./Calendar.css"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Year from './Year';
+import './Calendar.css'
 
 // Calendar component
 

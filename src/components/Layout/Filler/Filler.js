@@ -1,20 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./Filler.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Filler.css';
 
 // flexbox filler element with flex = 1 
 
 const Filler = ({ size }) => {
-  return size === "small" ?
+  return size === 'small' ?
     <div
-      className="filler-small"
+      className='filler-small'
     /> :
-    size === "big" ?
+    size === 'big' ?
       <div
-        className="filler-big"
+        className='filler-big'
       /> :
       <div
-        className="filler"
+        className='filler'
       />;
 };
 

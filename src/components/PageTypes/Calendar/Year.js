@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Tour from "./Tour";
-import Show from "./Show";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Tour from './Tour';
+import Show from './Show';
 
 // year component
 
 const Year = ({ year, dateFormat }) => {
   const result = year.map((show) => {
 
-    return "tour" in show ?
+    return 'tour' in show ?
       <Tour
         tour={show}
         dateFormat={dateFormat}

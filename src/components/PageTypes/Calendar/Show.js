@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Bands from "./Bands";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Bands from './Bands';
 
 // single concert date component
 
 const Show = ({ show, dateFormat, className }) => {
   const date = dateFormat ?
     show.date.toFormat(dateFormat) :
-    show.date.toFormat("DDD");
+    show.date.toFormat('DDD');
   return (
     <li
       className={className}

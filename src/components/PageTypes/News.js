@@ -1,21 +1,21 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
-import { DateTime } from "luxon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
+import { DateTime } from 'luxon';
 import HtmlMapper from 'react-html-map';
-import { tagMap } from "../Layout/Layout";
+import { tagMap } from '../Layout/Layout';
 
 // fetch page json data
 
 let jsonString;
 
-fetch("content/news.json")
+fetch('content/news.json')
   .then((response) => response.text())
   .then((data) => {
     jsonString = data;
   })
   .catch((err) => {
-    console.log("Failed to fetch page: ", err);
+    console.log('Failed to fetch page: ', err);
   });
 
 
@@ -35,25 +35,25 @@ const News = ({ title, subtitle, locale }) => {
   // create posts
 
   const components = posts.map((post) => {
-    const date = DateTime.fromFormat(post.date, "yyyyMMdd").setLocale(locale);
+    const date = DateTime.fromFormat(post.date, 'yyyyMMdd').setLocale(locale);
     const dateString = dateFormat ?
       date.toFormat(dateFormat) :
-      date.toFormat("DDD");
+      date.toFormat('DDD');
 
     // create post components from data
 
     return (
       <div
-        className="newsPost"
+        className='newsPost'
       >
         <h2>{post.title}</h2>
         <div
-          className="postDate"
+          className='postDate'
         >
           {dateString}
         </div>
         <HtmlMapper html={post.html}>
-          {tagMap}
+          {tagMap()}
         </HtmlMapper>
       </div>
     );

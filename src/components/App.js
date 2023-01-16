@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { createHashRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./Layout/Layout";
-import PageTypes from "./PageTypes/PageTypes";
-import NotFoundPage from "./PageTypes/NotFoundPage";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { createHashRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './Layout/Layout';
+import PageTypes from './PageTypes/PageTypes';
+import NotFoundPage from './PageTypes/NotFoundPage';
 
 // create routing from config data
 
-const App = ({ appData }) => {
+const App = ({ config }) => {
 
   // create child routes from config data 
 
-  const createRoutes = ({ title, locale, pageNotFound, routes, rootElement }) => {
+  const createRoutes = ({ title, locale, cookieConsentText, pageNotFound, routes, rootElement }) => {
 
     // map subtitles
 
@@ -35,6 +35,7 @@ const App = ({ appData }) => {
           title={title}
           subtitle={subtitles[id]}
           locale={locale}
+          cookieConsentText={cookieConsentText}
         />
       );
     };
@@ -57,10 +58,10 @@ const App = ({ appData }) => {
     ].concat(
       childRoutes.concat([
         {
-          path: "/error",
+          path: '/error',
           element: <NotFoundPage
             title={title}
-            subtitle="Error"
+            subtitle='Error'
             message={pageNotFound}
           />
         }
@@ -72,16 +73,16 @@ const App = ({ appData }) => {
 
   const routes = [
     {
-      path: "/",
-      element: <Layout appData={appData} />,
-      errorElement: <Layout appData={appData} />,
-      children: createRoutes(appData)
+      path: '/',
+      element: <Layout config={config} />,
+      errorElement: <Layout config={config} />,
+      children: createRoutes(config)
     }
   ];
 
   // create router from routes
 
-  const router = appData.useHashRouter ?
+  const router = config.useHashRouter ?
     createHashRouter(routes) :
     createBrowserRouter(routes);
 
@@ -94,7 +95,7 @@ const App = ({ appData }) => {
 };
 
 App.propTypes = {
-  appData: PropTypes.object.isRequired
+  config: PropTypes.object.isRequired
 };
 
 export default App;

@@ -1,7 +1,7 @@
-import React, { useState, useRef, useCallback, useEffect } from "react";
-import Filler from "../Fillers/Filler/Filler";
-import Iframe from "react-iframe";
-import "./IframeLoader.css";
+import React, { useState, useRef, useCallback, useEffect } from 'react';
+import Filler from '../Fillers/Filler/Filler';
+import Iframe from 'react-iframe';
+import './IframeLoader.css';
 
 // show spinner while loading iframe
 
@@ -38,11 +38,11 @@ const IframeLoader = ({ spinner, src, width, height, border, frameborder, ...res
         width: width,
         height: height
       }}
-      className="embed"
+      className='embed'
     >
       {
         loading ?
-          <div className="loading">
+          <div className='loading'>
             <Filler />
             {spinner}
             <Filler />

@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Show from "./Show";
-import Bands from "./Bands";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Show from './Show';
+import Bands from './Bands';
 
 // tour component
 
 const Tour = ({ tour, dateFormat }) => {
-  const result = "shows" in tour ?
+  const result = 'shows' in tour ?
     tour.shows.map((show) => {
 
       return (
         <Show 
           show={show}
           dateFormat={dateFormat}
-          className="tourDates"
+          className='tourDates'
         />
       );
     }) :
@@ -22,7 +22,7 @@ const Tour = ({ tour, dateFormat }) => {
   return (
     <>
       <li
-        className="tourName"
+        className='tourName'
       >
         <b>{tour.tour}</b>
         <Bands

@@ -1,6 +1,6 @@
-import React from "react";
-import { useRouteError, Navigate, Outlet } from "react-router-dom";
-import "./Content.css";
+import React from 'react';
+import { useRouteError, Navigate, Outlet } from 'react-router-dom';
+import './Content.css';
 
 // content component with router outlet
 
@@ -17,19 +17,19 @@ const Content = () => {
 
     // container elements for layout
     <div
-      className="content-pane"
+      className='content-pane'
     >
       <div
-        className="content-wrapper"
+        className='content-wrapper'
       >
         <div
-          className="content"
+          className='content'
         >
 
           {/* load content page */}
           {
             error ?
-              <Navigate to="/error" replace={true} /> :
+              <Navigate to='/error' replace={true} /> :
               <Outlet />
           }
         </div>

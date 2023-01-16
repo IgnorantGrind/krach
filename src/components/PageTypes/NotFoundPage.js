@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 
 const NotFoundPage = ({ title, subtitle, message }) => (
   <>

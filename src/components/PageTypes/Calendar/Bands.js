@@ -1,20 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 // bands components, renders the bandnames for a show
 
 const Bands = ({ show }) => {
-  let result = "";
-  if ("bands" in show) {
+  let result = '';
+  if ('bands' in show) {
     let band;
     for (band of show.bands) {
-      result += " + " + band;
+      result += ' + ' + band;
     };
   };
 
-  return "bands" in show ?
+  return 'bands' in show ?
     <li
-      className="bandNames"
+      className='bandNames'
     >
       {result}
     </li> :
