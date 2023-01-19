@@ -8,6 +8,7 @@
   "cookieConsentText": "Bandcamp uses tracking cookies from Google Analytics, so we need your consent to continue.",
   "noScript": "Please enable JavaScript to view the Ignorant website.",
   "pageNotFound": "Sorry, the content you requested does not exist.",
+  "imagePath": "img/",
   "mainLogo": "IgnorantLogo.jpg",
   "mainLogoAlt": "Ignorant Band Logo",
   "additionalLogo": "IgnorantNoiseLogo.jpg",

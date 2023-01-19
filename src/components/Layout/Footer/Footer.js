@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Filler from '../Filler/Filler';
+
 import './Footer.css';
 
 // footer component with 'about' link

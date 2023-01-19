@@ -1,0 +1,27 @@
+.cookie-consent-container {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cookie-consent {
+  width: 50%;
+  background-color: hsl(80, 30%, 25%);
+  border: 1px solid hsl(80, 30%, 15%);
+  border-radius: 3px;
+  position: relative;
+  right: 5%;
+  padding: 0.3em 0.7em 0.1em;
+  font-size: calc(8px + 0.8vmin);
+  text-align: center;
+  box-shadow: white 10px inset;
+}
+
+.cookie-consent-button {
+  border: 3px double hsl(80, 30%, 25%);
+  background-color: hsl(0, 0%, 66%);
+  border-radius: 5px;
+  margin: 0.5em;
+  padding: 0.3em 0.7em;
+}
