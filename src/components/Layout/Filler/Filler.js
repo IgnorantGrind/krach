@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import './Filler.css';
 
 // flexbox filler element with flex = 1 

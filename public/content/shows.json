@@ -8,7 +8,7 @@
       "date": "20230316",
       "end": "20230319",
       "tour": "Junge Alter Amok Tour",
-      "bands": [
+      "artists": [
         "DEAD SLOW",
         "CODENAME HYDRA"
       ],
@@ -16,7 +16,7 @@
         {
           "date": "20230316",
           "city": "Halle",
-          "venue": "Reil18 (tbc)"
+          "venue": "Reil18"
         },
         {
           "date": "20230317",
@@ -25,8 +25,8 @@
         },
         {
           "date": "20230318",
-          "city": "Chemnitz",
-          "venue": "B-Hof (tbc)"
+          "city": "Chemnitz/Dresden/Erzgebirge",
+          "venue": "help needed (tba)"
         },
         {
           "date": "20230319",
@@ -39,7 +39,7 @@
       "date": "20230227",
       "city": "Leipzig",
       "venue": "",
-      "bands": [
+      "artists": [
         "WORMROT (singapore)",
         "NICKELCRACK"
       ]
@@ -48,7 +48,7 @@
       "date": "20220806",
       "city": "Leipzig",
       "venue": "Soltmann",
-      "bands": [
+      "artists": [
         "ART EST",
         "HUMAN PREY"
       ]
@@ -57,7 +57,7 @@
       "date": "20220618",
       "city": "Leipzig",
       "venue": "Conserve",
-      "bands": [
+      "artists": [
         "NO HONEY IN PARADISE",
         "DRECK WEG"
       ]
@@ -66,7 +66,7 @@
       "date": "20220708",
       "city": "Leipzig",
       "venue": "hinZundkunZ",
-      "bands": [
+      "artists": [
         "SOCIAL CHAOS (bra)",
         "DEZAZTRE NATURAL (chi)"
       ]

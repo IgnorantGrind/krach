@@ -2,12 +2,10 @@
   "title": "Ignorant",
   "description": "Political grindcore band from Leipzig, Germany. Opposing political domination, economic exploitation and cock rock!",
   "keywords": "Ignorant, music, band, grindcore, grind, crustcore, crust, powerviolence, death metal, thrash metal, Leipzig, Germany",
+  "locale": "en-GB",
+  "imagePath": "img/",
   "icon": "IgnorantNoise.ico",
   "appleTouchIcon": "IgnorantNoise.png",
-  "locale": "en-GB",
-  "cookieConsentText": "Bandcamp uses tracking cookies from Google Analytics, so we need your consent to continue.",
-  "noScript": "Please enable JavaScript to view the Ignorant website.",
-  "pageNotFound": "Sorry, the content you requested does not exist.",
   "mainLogo": "IgnorantLogo.jpg",
   "mainLogoAlt": "Ignorant Band Logo",
   "additionalLogo": "IgnorantNoiseLogo.jpg",
@@ -16,7 +14,7 @@
   "edgeImgRight": "SozialAlkR.jpg",
   "edgeImgAlt": "picture of a liquor shelf",
   "googleFont": "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto+Slab:wght@200;300;400&display=swap",
-  "useHashRouter": false,
+  "useHashRouter": true,
   "rootElement": {
     "id": "home",
     "subtitle": "Grindcore",
@@ -59,5 +57,9 @@
       "subtitle": "About",
       "link": "about"
     }
-  ]
+  ],
+  "knownTrackerConsentText": "%thirdSiteName% uses tracking cookies, so we need your consent to continue. Read the %thirdSiteName% cookie policy here: %cookiePolicyUrl%.",
+  "unknownTrackerConsentText": "This unknown plugin from %thirdSiteName% probably uses tracking cookies, so we need your consent to load it.",
+  "noScript": "Please enable JavaScript to view the Ignorant website.",
+  "pageNotFound": "Sorry, the content you requested does not exist."
 }

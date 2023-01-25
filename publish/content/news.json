@@ -1,0 +1,11 @@
+{
+  "heading": "Ignorant News",
+  "dateFormat": "d. MMMM yyyy",
+  "posts": [
+    {
+      "date": "20230112",
+      "title": "Hello World",
+      "html": "<div><p>You found your way to our new website. Congratulations.</p><p>Check out our live recording from our rehearsal room. There is a video version, too.<br />In spring 2023 we have planned some concerts in east germany. Have a look at our tour dates!</p><p>You can also write us to set up a show in your town. We play for beer not profit.</p></div>"
+    }
+  ]
+}

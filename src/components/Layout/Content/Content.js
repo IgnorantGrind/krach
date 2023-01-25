@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouteError, Navigate, Outlet } from 'react-router-dom';
+
 import './Content.css';
 
 // content component with router outlet

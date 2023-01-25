@@ -1,34 +1,42 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+
+import { GlobalContext } from '../../../contexts/GlobalContext';
 import classNames from 'classnames';
+
 import './EdgeImg.css';
 
 // image with automatic size control
 
-const EdgeImg = ({ src, isLeft = true, alt = '' }) => (
+const EdgeImg = ({ isLeft = true }) => {
 
-  // container for layout
+  // destructurize config data
 
-  <div
-    className={classNames({
-      'edge-container-left': isLeft,
-      'edge-container-right': !isLeft
-    })}
-  >
+  const { Config } = useContext(GlobalContext);
+  const { edgeImgLeft, edgeImgRight, edgeImgAlt } = Config;
+  const src = isLeft ?
+    edgeImgLeft :
+    edgeImgRight;
 
+  // container with image
 
-    <img
-      src={src}
-      alt={alt}
-      className='edge-img'
-    />
-  </div>
-);
+  return src &&
+    < div
+      className={classNames({
+        'edge-container-left': isLeft,
+        'edge-container-right': !isLeft
+      })}
+    >
+      <img
+        src={src}
+        alt={edgeImgAlt}
+        className='edge-img'
+      />
+    </div>;
+};
 
 EdgeImg.propTypes = {
-  src: PropTypes.string.isRequired,
-  isLeft: PropTypes.bool,
-  alt: PropTypes.string
+  isLeft: PropTypes.bool
 };
 
 export default EdgeImg;
