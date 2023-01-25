@@ -2,6 +2,8 @@
 
 # KrachPage files
 /krachpage
+
+# Ignorant homepage
 /publish
 
 # test app and components
@@ -10,9 +12,6 @@
 
 # dev batch files
 *.bat
-
-# offline content
-/content
 
 # visual studio
 /.vs
