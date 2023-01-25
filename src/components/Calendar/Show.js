@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Bands from './Bands';
+import ArtistsString from './ArtistsString';
 
 // single concert date component
 
@@ -14,7 +14,7 @@ const Show = ({ show, dateFormat, className }) => {
       className={className}
     >
       {date} - {show.city} - {show.venue}
-      <Bands
+      <ArtistsString
         show={show}
       />
     </li>

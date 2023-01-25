@@ -1,13 +1,42 @@
 import { Link } from 'react-router-dom';
-import Iframe from 'react-iframe';
 import HtmlMapper from 'react-html-map';
 import PropTypes from 'prop-types';
 
-import ThirdSideTrackerConsentForm from './cookieManagement/ThirdSideTrackerConsentForm';
+import ThirdSideIframeProvider from './ThirdSideIframeProvider';
+
+// parse inline style tags to jsx
+
+const parseInlineStyle = (stringStyles) => {
+  const result = typeof stringStyles === 'string' ? stringStyles
+    .split(';')
+    .reduce((acc, style) => {
+      const colonPosition = style.indexOf(':')
+
+      if (colonPosition === -1) {
+        return acc
+      }
+
+      const
+        camelCaseProperty = style
+          .substr(0, colonPosition)
+          .trim()
+          .replace(/^-ms-/, 'ms-')
+          .replace(/-./g, c => c.substr(1).toUpperCase()),
+        value = style.substr(colonPosition + 1).trim()
+
+      return value ? { ...acc, [camelCaseProperty]: value } : acc
+    }, {}) : {};
+
+  return result;
+};
+
+parseInlineStyle.propTypes = {
+  stringStyles: PropTypes.string.isRequired
+};
 
 // set element map for HtmlMapper
 
-const TagMap = {
+const tagMap = {
 
   // pass these elements as is
 
@@ -25,31 +54,14 @@ const TagMap = {
 
   // convert <iframe> to react-iframe <Iframe>
 
-  iframe: ({ src, width, height, border, frameborder, ...rest }) => {
-    const frame = (
-      <Iframe
-        url={src}
-        frameBorder={frameborder || border}
-        width={width}
-        height={height}
+  iframe: ({ frameborder, style, ...rest }) => {
+    const styles = parseInlineStyle(style);
+    return (
+      <ThirdSideIframeProvider
+        frameBorder={frameborder}
+        styles={styles}
         {...rest}
       />
-    );
-
-    const wrapFrame = src.includes('youtube') ?
-      <div
-        class='video-container'
-      >
-        {frame}
-      </div> :
-      frame;
-
-    return (
-      <ThirdSideTrackerConsentForm
-        src={src}
-      >
-        {wrapFrame}
-      </ThirdSideTrackerConsentForm>
     );
   },
 
@@ -64,15 +76,19 @@ const TagMap = {
       </Link> :
       <a
         href={href}
+        target="_blank"
+        rel="noreferrer"
         {...rest}
       >
         {children}
       </a>
 };
 
+// provide HtmlMapper with TagMap
+
 const HtmlProvider = ({ html }) => (
   <HtmlMapper html={html}>
-    {TagMap}
+    {tagMap}
   </HtmlMapper>
 );
 
@@ -80,6 +96,5 @@ HtmlProvider.propTypes = {
   html: PropTypes.string.isRequired
 };
 
-
-export { TagMap };
+export { parseInlineStyle, tagMap };
 export default HtmlProvider;

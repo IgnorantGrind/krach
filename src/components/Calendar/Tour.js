@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Show from './Show';
-import Bands from './Bands';
+import ArtistsString from './ArtistsString';
 
 // tour component
 
@@ -26,7 +26,7 @@ const Tour = ({ tour, dateFormat }) => {
         className='tourName'
       >
         <b>{tour.tour}</b>
-        <Bands
+        <ArtistsString
           show={tour}
         />
       </li>

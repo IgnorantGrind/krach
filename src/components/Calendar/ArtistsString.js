@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 // bands components, renders the bandnames for a show
 
-const Bands = ({ show }) => {
+const ArtistsString = ({ show }) => {
   let result = '';
-  if ('bands' in show) {
-    let band;
-    for (band of show.bands)
-      result += ' + ' + band;
+  if ('artists' in show) {
+    let artist;
+    for (artist of show.artists)
+      result += ' + ' + artist;
   };
 
   return 'bands' in show ?
@@ -20,8 +20,8 @@ const Bands = ({ show }) => {
     <></>;
 };
 
-Bands.propTypes = {
+ArtistsString.propTypes = {
   show: PropTypes.object.isRequired,
 };
 
-export default Bands;
+export default ArtistsString;

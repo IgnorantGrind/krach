@@ -1,9 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # KrachPage files
-/index.html
-/manifest.json
 /krachpage
+/publish
 
 # test app and components
 /src/components/TestApp

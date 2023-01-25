@@ -2,6 +2,7 @@
 // import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { CookiesProvider } from "react-cookie";
 
 import GlobalContextProvider from './contexts/GlobalContext'
 import CookieContextProvider from './contexts/CookieContext'
@@ -18,9 +19,11 @@ fetch('config.json')
       <GlobalContextProvider
         config={data}
       >
-        <CookieContextProvider>
-          <App />
-        </CookieContextProvider>
+        <CookiesProvider>
+          <CookieContextProvider>
+            <App />
+          </CookieContextProvider>
+        </CookiesProvider>
       </GlobalContextProvider>
     );
   })

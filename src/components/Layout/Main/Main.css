@@ -30,7 +30,7 @@ a:hover {
 }
 
 a:active {
-  color: hsl(29, 100%, 85%);
+  color: hsl(29, 100%, 91%);
   border: none;
   user-select: none;
   -moz-user-select: none;
