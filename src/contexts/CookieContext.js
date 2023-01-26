@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { useCookies } from 'react-cookie';
+// import { useCookies } from 'react-cookie';
 import PropTypes from 'prop-types';
 
 // create context
@@ -10,14 +10,14 @@ const CookieContext = createContext();
 
 const CookieContextProvider = ({ children }) => {
 
-  const [cookies, setCookie] = useCookies(['cookie-consent']);
+  /* const [cookies, setCookie] = useCookies(['cookie-consent']); */
   const [trackerConsent, setTrackerConsent] = useState([]);
 
   // setter
 
   const agreeToTracker = (thirdSiteName) => {
     if (!trackerConsent.includes(thirdSiteName)) {
-      var date = new Date();
+    /*var date = new Date();
       date.setMonth(date.getMonth() + 1);
 
       // set cookie
@@ -30,7 +30,7 @@ const CookieContextProvider = ({ children }) => {
           expires: date,
           sameSite: 'lax'
         }
-      );
+      );*/
 
       // set app state
 
@@ -46,14 +46,14 @@ const CookieContextProvider = ({ children }) => {
   // getter
 
   const isTrackerConsent = (thirdSiteName) => {
-    if (cookies[thirdSiteName])
+  /*if (cookies[thirdSiteName])
       if (!trackerConsent.includes(thirdSiteName))
         setTrackerConsent(
           [
             ...trackerConsent,
             thirdSiteName
           ]
-        );
+        );*/
     return trackerConsent.includes(thirdSiteName);
   }
 

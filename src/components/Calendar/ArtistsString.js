@@ -11,9 +11,9 @@ const ArtistsString = ({ show }) => {
       result += ' + ' + artist;
   };
 
-  return 'bands' in show ?
+  return 'artists' in show ?
     <li
-      className='bandNames'
+      className='artistNames'
     >
       {result}
     </li> :
